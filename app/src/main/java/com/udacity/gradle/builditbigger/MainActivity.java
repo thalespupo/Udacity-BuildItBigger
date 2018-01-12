@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.tapura.badjokes.BadJokesMan;
 import com.tapura.bigbadjokes.BadJokesActivity;
