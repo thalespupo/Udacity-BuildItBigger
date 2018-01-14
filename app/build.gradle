@@ -18,6 +18,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    productFlavors {
+        paid {
+            // default config is the paid
+        }
+        free {
+            versionNameSuffix 'free'
+            applicationId 'com.udacity.gradle.builditbigger.free'
+        }
+    }
 }
 
 dependencies {
@@ -27,7 +36,7 @@ dependencies {
         exclude group: 'com.google.code.findbugs', module: 'jsr305'
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.google.android.gms:play-services-ads:11.0.4'
+    freeCompile 'com.google.android.gms:play-services-ads:11.0.4'
     compile project(path: ':bigbadjokes')
     compile project(path: ':backend', configuration: 'android-endpoints')
     compile project(path: ':libbadjokes')
